@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/abc"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
+
+    <ImageView
+        android:src="@drawable/ic_launcher_background"
+        android:layout_width="300dp"
+        android:layout_height="300dp"/>
+    <ImageView
+        android:src="@drawable/abc"
+        android:scaleType="centerCrop"
+        android:background="@color/black"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+<!-- src ="" 경로(@를사용해서 경로를 지정한다)
+    (안드로이드 폴더 구조가 복잡하기 때문에 편하게 쓰라고 만들어 준것!)
+
+    이미지는 해상도가 존재한다
+    저해상도 이미지
+    중간해상도 이미지
+    고해상도 이미지
+
+
+
+    android:scaleType="centerCrop"  : 사진이 원래들고있던 비율을 무시하고 넣는다
+
+-->
+
+</LinearLayout>
