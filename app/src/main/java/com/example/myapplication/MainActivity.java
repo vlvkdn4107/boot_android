@@ -12,6 +12,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "TAG";
+    private static final String EQ = "EQ";
     private TextView one;
     private TextView two;
     private TextView three;
@@ -31,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
     private TextView multi;
 
     String calculation = "";
-    String newValue = "0";
+    String newValue = "";
     String oldValue = "0";
+    String cr_Value = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,141 +71,259 @@ public class MainActivity extends AppCompatActivity {
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("MYTAG", "one 이 눌러 졌어요");
-//                oldValue = oldValue + "1";
-//                c_Result.setText(oldValue);
-                newValue = newValue + "1";
-                result1.setText(newValue);
-//                if(result.getText().equals("0")){
-//                    result.setText("");
-//                }
-//                result.setText(result.getText() + "1");
+
+                if(result1.getText().equals("0")){
+                    result1.setText("1");
+                }else{
+                    oldValue = result1.getText().toString();
+                    newValue = oldValue + "1";
+                    result1.setText(newValue);
+                    Log.d("MYTAG", "!!!!!" + oldValue);
+                    Log.d("MYTAG", "@@@@@@" + newValue);
+                }
+                if(c_Result.getText().equals("0")){
+                    c_Result.setText("1");
+                }else{
+
+                    cr_Value = cr_Value + "1";
+                    c_Result.setText(cr_Value);
+                }
+
             }
 
         });
         two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("MYTAG", "two 이 눌러 졌어요");
-                newValue = newValue + "2";
-                result1.setText(newValue);
-//                c_Result.setText(result1.getText() + newValue);
-//                if(result.getText().equals("0")){
-//                    result.setText("");
-//                }
-//                result.setText(result.getText() + "2");
+                if(result1.getText().equals("0")){
+                    result1.setText("2");
+                }else{
+                    oldValue = result1.getText().toString();
+                    newValue = oldValue + "2";
+                    result1.setText(newValue);
+                    Log.d("MYTAG", "!!!!!" + oldValue);
+                    Log.d("MYTAG", "@@@@@@" + newValue);
+                }
+                if(c_Result.getText().equals("0")){
+                    c_Result.setText("2");
+                }else{
+
+                    cr_Value = cr_Value + "2";
+                    c_Result.setText(cr_Value);
+                }
             }
         });
         
         three.setOnClickListener(view ->{
             Log.d(TAG, "three 가 눌러 졌어요");
-//            if(result.getText().equals("0")){
-//                result.setText("");
-//            }
-//            result.setText(result.getText() + "3");
-            newValue = newValue + "3";
-            result1.setText(newValue);
+            if(result1.getText().equals("0")){
+                result1.setText("3");
+            }else{
+                oldValue = result1.getText().toString();
+                newValue = oldValue + "3";
+                result1.setText(newValue);
+                Log.d("MYTAG", "!!!!!" + oldValue);
+                Log.d("MYTAG", "@@@@@@" + newValue);
 
+            }
+            if(c_Result.getText().equals("0")){
+                c_Result.setText("3");
+            }else{
+
+                cr_Value = cr_Value + "3";
+                c_Result.setText(cr_Value);
+            }
         });
         four.setOnClickListener(view ->{
             Log.d(TAG, "four 가 눌러 졌어요");
-            newValue = newValue + "4";
-            result1.setText(newValue);
-//            if(result.getText().equals("0")){
-//                result.setText("");
-//            }
-//            result.setText(result.getText() + "4");
+            if(result1.getText().equals("0")){
+                result1.setText("4");
+            }else{
+                oldValue = result1.getText().toString();
+                newValue = oldValue + "4";
+                result1.setText(newValue);
+                Log.d("MYTAG", "!!!!!" + oldValue);
+                Log.d("MYTAG", "@@@@@@" + newValue);
+            }
+            if(c_Result.getText().equals("0")){
+                c_Result.setText("4");
+            }else{
+
+                cr_Value = cr_Value + "4";
+                c_Result.setText(cr_Value);
+            }
         });
         five.setOnClickListener(view ->{
-            Log.d(TAG, "five 가 눌러 졌어요");
-            newValue = newValue + "5";
-            result1.setText(newValue);
-//            if(result.getText().equals("0")){
-//                result.setText("");
-//            }
-//            result.setText(result.getText() + "5");
+            if(result1.getText().equals("0")){
+                result1.setText("5");
+            }else{
+                oldValue = result1.getText().toString();
+                newValue = oldValue + "5";
+                result1.setText(newValue);
+                Log.d("MYTAG", "!!!!!" + oldValue);
+                Log.d("MYTAG", "@@@@@@" + newValue);
+            }
+            if(c_Result.getText().equals("0")){
+                c_Result.setText("5");
+            }else{
+
+                cr_Value = cr_Value + "5";
+                c_Result.setText(cr_Value);
+            }
         });
         six.setOnClickListener(view ->{
-            Log.d(TAG, "six 가 눌러 졌어요");
-            newValue = newValue + "6";
-            result1.setText(newValue);
-//            if(result.getText().equals("0")){
-//                result.setText("");
-//            }
-//            result.setText(result.getText() + "6");
+            if(result1.getText().equals("0")){
+                result1.setText("6");
+            }else{
+                oldValue = result1.getText().toString();
+                newValue = oldValue + "6";
+                result1.setText(newValue);
+            }
+            if(c_Result.getText().equals("0")){
+                c_Result.setText("6");
+            }else{
+
+                cr_Value = cr_Value + "6";
+                c_Result.setText(cr_Value);
+            }
         });
         seven.setOnClickListener(view ->{
-            Log.d(TAG, "seven 가 눌러 졌어요");
-            newValue = newValue + "7";
-            result1.setText(newValue);
-//            if(result.getText().equals("0")){
-//                result.setText("");
-//            }
-//            result.setText(result.getText() + "7");
+            if(result1.getText().equals("0")){
+                result1.setText("7");
+            }else{
+                oldValue = result1.getText().toString();
+                newValue = oldValue + "7";
+                result1.setText(newValue);
+            }
+            if(c_Result.getText().equals("0")){
+                c_Result.setText("7");
+            }else{
+
+                cr_Value = cr_Value + "7";
+                c_Result.setText(cr_Value);
+            }
         });
         eight.setOnClickListener(view ->{
-            Log.d(TAG, "eight 가 눌러 졌어요");
-            newValue = newValue + "8";
-            result1.setText(newValue);
-//            if(result.getText().equals("0")){
-//                result.setText("");
-//            }
-//            result.setText(result.getText() + "8");
+            if(result1.getText().equals("0")){
+                result1.setText("8");
+            }else{
+                oldValue = result1.getText().toString();
+                newValue = oldValue + "8";
+                result1.setText(newValue);
+            }
+            if(c_Result.getText().equals("0")){
+                c_Result.setText("8");
+            }else{
+
+                cr_Value = cr_Value + "8";
+                c_Result.setText(cr_Value);
+            }
         });
         nine.setOnClickListener(view ->{
-            Log.d(TAG, "nine 가 눌러 졌어요");
-            newValue = newValue + "9";
-            result1.setText(newValue);
-//            if(result.getText().equals("0")){
-//                result.setText("");
-//            }
-//            result.setText(result.getText() + "9");
+            if(result1.getText().equals("0")){
+                result1.setText("9");
+            }else{
+                oldValue = result1.getText().toString();
+                newValue = oldValue + "9";
+                result1.setText(newValue);
+            }
+            if(c_Result.getText().equals("0")){
+                c_Result.setText("9");
+            }else{
+
+                cr_Value = cr_Value + "9";
+                c_Result.setText(cr_Value);
+            }
         });
         zero.setOnClickListener(view ->{
-            Log.d(TAG, "zero 가 눌러 졌어요");
-            newValue = newValue + "0";
-            result1.setText(newValue);
-//            if(result.getText().equals("0")){
-//                result.setText("");
-//            }
-//            result.setText(result.getText() + "0");
+            if(result1.getText().equals("0")){
+                result1.setText("0");
+            }else{
+                oldValue = result1.getText().toString();
+                newValue = oldValue + "0";
+                result1.setText(newValue);
+            }
+            if(c_Result.getText().equals("0")){
+                c_Result.setText("0");
+            }else{
+
+                cr_Value = cr_Value + "0";
+                c_Result.setText(cr_Value);
+            }
         });
         ce.setOnClickListener(view ->{
             Log.d(TAG, "ce 가 눌러 졌어요");
             newValue = "0";
             oldValue = "0";
-            result1.setText("");
+            result1.setText("0");
+            c_Result.setText("");
+            cr_Value = "";
+            Log.d("MYTAG", "newValue : " + newValue);
+            Log.d("MYTAG", "oldValue : " + oldValue);
 //            c_Result.setText("");
         });
         plus.setOnClickListener(view ->{
-            // 이미 구분은 가능함
-            Log.d(TAG, "plus 가 눌러 졌어요");
-            newValue = newValue + "+";
-            result1.setText(newValue);
-            // 1. dje
-            // 2.
+            calculation = "+";
+            result1.setText("");
+
+
+            cr_Value = cr_Value + "+";
+            c_Result.setText(cr_Value);
+
+
+
+
+
         });
 
         multi.setOnClickListener(v -> {
-            newValue = newValue + "×";
-            result1.setText(newValue);
+
+            calculation = "x";
+            result1.setText("");
+
+
+            cr_Value = cr_Value + "x";
+            c_Result.setText(cr_Value);
         });
 
         equal.setOnClickListener(v -> {
             // newValue -> String 이라서 형변환 해야된다
             // 1. 1눌렀을때 newValue에 1이라는 값이 담겨 져있다
             // 2.
-            int number1 = Integer.parseInt(newValue);
-            int number2 = Integer.parseInt(oldValue);
-            int sum = (number1 + number2);
-            oldValue = String.valueOf(sum);
-            c_Result.setText(oldValue);
-//            if(result.getText().equals("+")){
-//
-//            }
 
-            Log.d(TAG, " 먹히나?" + number1);
-            Log.d(TAG, " 먹히나?" + number2);
+            switch (calculation){
+                case "+":
+                    Log.d("EQ", "eqNew : " + newValue);
+                    Log.d("EQ", "eqOld : " + oldValue);
+                    Log.d("EQ", "=====================================");
+                    oldValue = result1.getText().toString();
+                    int number1 = Integer.parseInt(newValue);
+                    int number2 = Integer.parseInt(oldValue);
+                    int sum = (number1 + number2);
+                    oldValue = String.valueOf(sum);
+                    result1.setText(oldValue);
+                    c_Result.setText(cr_Value + " =");
+                    newValue="0";
+                    oldValue="0";
+                    cr_Value="0";
+                    Log.d("EQ", "number1 : " + number1);
+                    Log.d("EQ", "number2 : " + number2);
+                    Log.d("EQ", "=====================================");
+//                    calculation = "";
+                    break;
+                case "x":
+                    oldValue = result1.getText().toString();
+                    int multi1 = Integer.parseInt(newValue);
+                    int multi2 = Integer.parseInt(oldValue);
+                    int multi_multi = (multi1 * multi2);
+                    oldValue = String.valueOf(multi_multi);
+                    result1.setText(oldValue);
+                    c_Result.setText(cr_Value + " =");
+                    newValue="0";
+                    oldValue="0";
+                    cr_Value="0";
+                    break;
+            }
 
 
         });
