@@ -25,16 +25,25 @@ public class MainActivity extends AppCompatActivity {
     private TextView zero;
     private TextView ce;
     private TextView plus;
+    private TextView equal;
+    private TextView multi;
+    private TextView minus;
+    private TextView division;
+
     private TextView result1;
     private TextView c_Result;
 
-    private TextView equal;
-    private TextView multi;
+
 
     String calculation = "";
     String newValue = "";
     String oldValue = "0";
     String cr_Value = "";
+
+    int number1 = 0;
+    int number2 = 0;
+    int result_value = 0;
+
 
 
     @Override
@@ -62,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
         c_Result = findViewById(R.id.c_Result);
         equal = findViewById(R.id.equal);
         multi = findViewById(R.id.multi);
+        minus = findViewById(R.id.minus);
+        division = findViewById(R.id.division);
 
 
 
@@ -71,9 +82,9 @@ public class MainActivity extends AppCompatActivity {
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if(result1.getText().equals("0")){
                     result1.setText("1");
+                    newValue =result1.getText().toString();
                 }else{
                     oldValue = result1.getText().toString();
                     newValue = oldValue + "1";
@@ -84,19 +95,17 @@ public class MainActivity extends AppCompatActivity {
                 if(c_Result.getText().equals("0")){
                     c_Result.setText("1");
                 }else{
-
                     cr_Value = cr_Value + "1";
                     c_Result.setText(cr_Value);
                 }
-
             }
-
         });
         two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(result1.getText().equals("0")){
                     result1.setText("2");
+                    newValue =result1.getText().toString();
                 }else{
                     oldValue = result1.getText().toString();
                     newValue = oldValue + "2";
@@ -107,7 +116,6 @@ public class MainActivity extends AppCompatActivity {
                 if(c_Result.getText().equals("0")){
                     c_Result.setText("2");
                 }else{
-
                     cr_Value = cr_Value + "2";
                     c_Result.setText(cr_Value);
                 }
@@ -118,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "three 가 눌러 졌어요");
             if(result1.getText().equals("0")){
                 result1.setText("3");
+                newValue =result1.getText().toString();
             }else{
                 oldValue = result1.getText().toString();
                 newValue = oldValue + "3";
@@ -138,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "four 가 눌러 졌어요");
             if(result1.getText().equals("0")){
                 result1.setText("4");
+                newValue =result1.getText().toString();
             }else{
                 oldValue = result1.getText().toString();
                 newValue = oldValue + "4";
@@ -156,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
         five.setOnClickListener(view ->{
             if(result1.getText().equals("0")){
                 result1.setText("5");
+                newValue =result1.getText().toString();
             }else{
                 oldValue = result1.getText().toString();
                 newValue = oldValue + "5";
@@ -174,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
         six.setOnClickListener(view ->{
             if(result1.getText().equals("0")){
                 result1.setText("6");
+                newValue =result1.getText().toString();
             }else{
                 oldValue = result1.getText().toString();
                 newValue = oldValue + "6";
@@ -190,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
         seven.setOnClickListener(view ->{
             if(result1.getText().equals("0")){
                 result1.setText("7");
+                newValue =result1.getText().toString();
             }else{
                 oldValue = result1.getText().toString();
                 newValue = oldValue + "7";
@@ -206,6 +219,7 @@ public class MainActivity extends AppCompatActivity {
         eight.setOnClickListener(view ->{
             if(result1.getText().equals("0")){
                 result1.setText("8");
+                newValue =result1.getText().toString();
             }else{
                 oldValue = result1.getText().toString();
                 newValue = oldValue + "8";
@@ -222,6 +236,7 @@ public class MainActivity extends AppCompatActivity {
         nine.setOnClickListener(view ->{
             if(result1.getText().equals("0")){
                 result1.setText("9");
+                newValue =result1.getText().toString();
             }else{
                 oldValue = result1.getText().toString();
                 newValue = oldValue + "9";
@@ -238,15 +253,15 @@ public class MainActivity extends AppCompatActivity {
         zero.setOnClickListener(view ->{
             if(result1.getText().equals("0")){
                 result1.setText("0");
+                newValue =result1.getText().toString();
             }else{
                 oldValue = result1.getText().toString();
                 newValue = oldValue + "0";
                 result1.setText(newValue);
             }
             if(c_Result.getText().equals("0")){
-                c_Result.setText("0");
-            }else{
 
+            }else if(number2 != 0){
                 cr_Value = cr_Value + "0";
                 c_Result.setText(cr_Value);
             }
@@ -255,6 +270,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "ce 가 눌러 졌어요");
             newValue = "0";
             oldValue = "0";
+            result_value = 0;
             result1.setText("0");
             c_Result.setText("");
             cr_Value = "";
@@ -263,28 +279,54 @@ public class MainActivity extends AppCompatActivity {
 //            c_Result.setText("");
         });
         plus.setOnClickListener(view ->{
+
+            number1 = Integer.parseInt(newValue);
             calculation = "+";
             result1.setText("");
+            if(result_value != 0){
+            c_Result.setText(oldValue + "+");
 
-
-            cr_Value = cr_Value + "+";
-            c_Result.setText(cr_Value);
-
-
-
-
-
+            }else if(result_value == 0){
+                cr_Value = cr_Value + "+";
+                c_Result.setText(cr_Value);
+            }
         });
 
         multi.setOnClickListener(v -> {
+            number1 = Integer.parseInt(newValue);
+            calculation = "*";
+            result1.setText("");
+            switch (calculation){
+                case "=" :
+                    c_Result.setText(oldValue + "x");
+                    break;
+                case "*" :
+                    cr_Value = cr_Value + "×";
+                    c_Result.setText(cr_Value);
+                    break;
+            }
 
-            calculation = "x";
+
+        });
+        minus.setOnClickListener(v -> {
+            number1 = Integer.parseInt(newValue);
+            calculation = "-";
             result1.setText("");
 
 
-            cr_Value = cr_Value + "x";
+            cr_Value = cr_Value + "-";
             c_Result.setText(cr_Value);
         });
+        division.setOnClickListener(v -> {
+
+            calculation = "/";
+            result1.setText("");
+
+
+            cr_Value = cr_Value + "/";
+            c_Result.setText(cr_Value);
+        });
+
 
         equal.setOnClickListener(v -> {
             // newValue -> String 이라서 형변환 해야된다
@@ -297,31 +339,47 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("EQ", "eqOld : " + oldValue);
                     Log.d("EQ", "=====================================");
                     oldValue = result1.getText().toString();
-                    int number1 = Integer.parseInt(newValue);
-                    int number2 = Integer.parseInt(oldValue);
-                    int sum = (number1 + number2);
-                    oldValue = String.valueOf(sum);
-                    result1.setText(oldValue);
-                    c_Result.setText(cr_Value + " =");
-                    newValue="0";
-                    oldValue="0";
-                    cr_Value="0";
-                    Log.d("EQ", "number1 : " + number1);
-                    Log.d("EQ", "number2 : " + number2);
-                    Log.d("EQ", "=====================================");
-//                    calculation = "";
+                    newValue = result1.getText().toString();
+                    number2 = Integer.parseInt(oldValue);
+                    if(result_value == 0){
+                        result_value = number1 + number2;
+                        oldValue = String.valueOf(result_value);
+                        result1.setText(oldValue);
+                        c_Result.setText(cr_Value + " =");
+
+                    }else if(result_value != 0){
+                        result_value = result_value + number2;
+                        oldValue = String.valueOf(result_value);
+                        result1.setText(oldValue);
+                        c_Result.setText(cr_Value + " =");
+
+                    }
+
                     break;
-                case "x":
+                case "*":
                     oldValue = result1.getText().toString();
-                    int multi1 = Integer.parseInt(newValue);
-                    int multi2 = Integer.parseInt(oldValue);
-                    int multi_multi = (multi1 * multi2);
-                    oldValue = String.valueOf(multi_multi);
+
+                    number2 = Integer.parseInt(oldValue);
+                    result_value = number1 * number2;
+                    oldValue = String.valueOf(result_value);
                     result1.setText(oldValue);
                     c_Result.setText(cr_Value + " =");
-                    newValue="0";
-                    oldValue="0";
-                    cr_Value="0";
+//                    newValue="0";
+//                    oldValue="0";
+//                    cr_Value="0";
+                    break;
+                case "-":
+                    oldValue = result1.getText().toString();
+                    number2 = Integer.parseInt(oldValue);
+                    result_value = number1 - number2;
+                    oldValue = String.valueOf(result_value);
+                    result1.setText(oldValue);
+                    c_Result.setText(cr_Value + " =");
+//                    newValue="0";
+//                    oldValue="0";
+//                    cr_Value="0";
+                    break;
+                case "/":
                     break;
             }
 
