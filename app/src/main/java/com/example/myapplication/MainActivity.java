@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView c_Result;
 
     String newValue = "";
-    String oldValue = "0";
+    String oldValue = "";
 
     String calculation = "";
 
@@ -90,8 +90,6 @@ public class MainActivity extends AppCompatActivity {
                     oldValue = result1.getText().toString();
                     newValue = oldValue + "1";
                     result1.setText(newValue);
-                    Log.d("MYTAG", "!!!!!" + oldValue);
-                    Log.d("MYTAG", "@@@@@@" + newValue);
                 }
                 if(c_Result.getText().equals("0")){
                     c_Result.setText("1");
@@ -111,8 +109,6 @@ public class MainActivity extends AppCompatActivity {
                     oldValue = result1.getText().toString();
                     newValue = oldValue + "2";
                     result1.setText(newValue);
-                    Log.d("MYTAG", "!!!!!" + oldValue);
-                    Log.d("MYTAG", "@@@@@@" + newValue);
                 }
                 if(c_Result.getText().equals("0")){
                     c_Result.setText("2");
@@ -132,8 +128,6 @@ public class MainActivity extends AppCompatActivity {
                 oldValue = result1.getText().toString();
                 newValue = oldValue + "3";
                 result1.setText(newValue);
-                Log.d("MYTAG", "!!!!!" + oldValue);
-                Log.d("MYTAG", "@@@@@@" + newValue);
 
             }
             if(c_Result.getText().equals("0")){
@@ -153,8 +147,6 @@ public class MainActivity extends AppCompatActivity {
                 oldValue = result1.getText().toString();
                 newValue = oldValue + "4";
                 result1.setText(newValue);
-                Log.d("MYTAG", "!!!!!" + oldValue);
-                Log.d("MYTAG", "@@@@@@" + newValue);
             }
             if(c_Result.getText().equals("0")){
                 c_Result.setText("4");
@@ -172,8 +164,6 @@ public class MainActivity extends AppCompatActivity {
                 oldValue = result1.getText().toString();
                 newValue = oldValue + "5";
                 result1.setText(newValue);
-                Log.d("MYTAG", "!!!!!" + oldValue);
-                Log.d("MYTAG", "@@@@@@" + newValue);
             }
             if(c_Result.getText().equals("0")){
                 c_Result.setText("5");
@@ -262,9 +252,13 @@ public class MainActivity extends AppCompatActivity {
             }
             if(c_Result.getText().equals("0")){
 
-            }else if(number2 != 0){
-                cr_Value = cr_Value + "0";
-                c_Result.setText(cr_Value);
+            }else{
+                    c_Result.setText(cr_Value);
+                    if(!newValue.equals("0")) {
+                        Log.d("MYTAG","0000@@@@@@@@@@000");
+                        cr_Value = cr_Value + "0";
+                        c_Result.setText(cr_Value);
+                    }
             }
         });
         ce.setOnClickListener(view ->{
@@ -275,54 +269,55 @@ public class MainActivity extends AppCompatActivity {
             result1.setText("0");
             c_Result.setText("");
             cr_Value = "";
-            Log.d("MYTAG", "newValue : " + newValue);
-            Log.d("MYTAG", "oldValue : " + oldValue);
-//            c_Result.setText("");
         });
         plus.setOnClickListener(view ->{
-
-            number1 = Integer.parseInt(newValue);
-            calculation = "+";
-            result1.setText("");
-            if(result_value != 0){
-                cr_Value = "";
-                cr_Value = oldValue + "+";
-                c_Result.setText(oldValue + "+");
-
-
-            }else if(result_value == 0){
-
-                cr_Value = cr_Value + "+";
-                c_Result.setText(cr_Value);
-            }
+            Log.d("MYTAG", "!@!!!!!!!!!!!!!!!!!!!!!!!!!!" + cr_Value);
+//              try {
+                  number1 = Integer.parseInt(newValue);
+                  calculation = "+";
+                  if(result_value != 0){
+                      cr_Value = "";
+                      cr_Value = oldValue + "+";
+                      c_Result.setText(oldValue + "+");
+                      result1.setText("");
+                  }else if(result_value == 0){
+                      Log.d("MYTAG", "@@@@@@@@@@@@@result_value==0000000@@@@@@@@" + cr_Value);
+                      if(result1.getText().equals("")) {
+                          Log.d("MYTAG", "result_value==0000000@@@@@@@@" + cr_Value);
+                          cr_Value = cr_Value + "";
+                          c_Result.setText(cr_Value);
+                      }else {
+                          result1.setText("");
+                          cr_Value = cr_Value + "+";
+                          c_Result.setText(cr_Value);
+                      }
+                  }
+//              }catch (Exception e){
+//
+//              }
+            
         });
 
         multi.setOnClickListener(v -> {
             number1 = Integer.parseInt(newValue);
             calculation = "*";
-            result1.setText("");
             if(result_value != 0){
                 cr_Value = "";
-                cr_Value = oldValue + "*";
+                cr_Value = oldValue + "×";
                 c_Result.setText(oldValue + "×");
-
+                result1.setText("");
 
             }else if(result_value == 0){
-
-                cr_Value = cr_Value + "*";
-                c_Result.setText(cr_Value);
+                if(result1.getText().equals("")){
+                    Log.d("MYTAG","result_value==0000000@@@@@@@@" + result_value);
+                    cr_Value = cr_Value + "";
+                    c_Result.setText(cr_Value);
+                }else{
+                    result1.setText("");
+                    cr_Value = cr_Value + "×";
+                    c_Result.setText(cr_Value);
+                }
             }
-//            switch (calculation){
-//                case "=" :
-//                    c_Result.setText(oldValue + "x");
-//                    break;
-//                case "*" :
-//                    cr_Value = cr_Value + "×";
-//                    c_Result.setText(cr_Value);
-//                    break;
-//            }
-
-
         });
         minus.setOnClickListener(v -> {
             number1 = Integer.parseInt(newValue);
@@ -332,28 +327,42 @@ public class MainActivity extends AppCompatActivity {
                 cr_Value = "";
                 cr_Value = oldValue + "-";
                 c_Result.setText(oldValue + "-");
-
+                result1.setText("");
 
             }else if(result_value == 0){
-
-                cr_Value = cr_Value + "-";
-                c_Result.setText(cr_Value);
+                if(result1.getText().equals("")){
+                    Log.d("MYTAG","result_value==0000000@@@@@@@@" + result_value);
+                    cr_Value = cr_Value + "";
+                    c_Result.setText(cr_Value);
+                }else{
+                    result1.setText("");
+                    cr_Value = cr_Value + "-";
+                    c_Result.setText(cr_Value);
+                }
             }
-
-//            cr_Value = cr_Value + "-";
-//            c_Result.setText(cr_Value);
         });
         division.setOnClickListener(v -> {
-
+            number1 = Integer.parseInt(newValue);
             calculation = "/";
             result1.setText("");
+            if(result_value != 0){
+                cr_Value = "";
+                cr_Value = oldValue + "/";
+                c_Result.setText(oldValue + "/");
+                result1.setText("");
 
-
-            cr_Value = cr_Value + "/";
-            c_Result.setText(cr_Value);
+            }else if(result_value == 0){
+                if(result1.getText().equals("")){
+                    Log.d("MYTAG","result_value==0000000@@@@@@@@" + result_value);
+                    cr_Value = cr_Value + "";
+                    c_Result.setText(cr_Value);
+                }else{
+                    result1.setText("");
+                    cr_Value = cr_Value + "/";
+                    c_Result.setText(cr_Value);
+                }
+            }
         });
-
-
         equal.setOnClickListener(v -> {
             switch (calculation){
                 case "+":
@@ -408,6 +417,21 @@ public class MainActivity extends AppCompatActivity {
                     }
                     break;
                 case "/":
+                    oldValue = result1.getText().toString();
+                    newValue = result1.getText().toString();
+                    number2 = Integer.parseInt(oldValue);
+                    if(result_value == 0){
+                        result_value = number1 / number2;
+                        oldValue = String.valueOf(result_value);
+                        result1.setText(oldValue);
+                        c_Result.setText(cr_Value + " =");
+
+                    }else if(result_value != 0){
+                        result_value = result_value / number2;
+                        oldValue = String.valueOf(result_value);
+                        result1.setText(oldValue);
+                        c_Result.setText(cr_Value + " =");
+                    }
                     break;
             }
 
