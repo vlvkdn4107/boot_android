@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My_blog_application</string>
+    <string name="content_description_end_icon">추가</string>
+</resources>

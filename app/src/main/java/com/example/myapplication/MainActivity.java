@@ -31,20 +31,18 @@ public class MainActivity extends AppCompatActivity {
     private TextView division;
 
     private TextView result1;
-    private TextView c_Result;
 
     String newValue = "";
     String oldValue = "";
 
     String calculation = "";
 
+    private TextView c_Result;
     String cr_Value = "";
-
 
     int number1 = 0;
     int number2 = 0;
     int result_value = 0;
-
 
 
     @Override
@@ -271,7 +269,6 @@ public class MainActivity extends AppCompatActivity {
             cr_Value = "";
         });
         plus.setOnClickListener(view ->{
-            Log.d("MYTAG", "!@!!!!!!!!!!!!!!!!!!!!!!!!!!" + cr_Value);
 //              try {
                   number1 = Integer.parseInt(newValue);
                   calculation = "+";
@@ -281,12 +278,13 @@ public class MainActivity extends AppCompatActivity {
                       c_Result.setText(oldValue + "+");
                       result1.setText("");
                   }else if(result_value == 0){
+                      c_Result.setText("");
                       Log.d("MYTAG", "@@@@@@@@@@@@@result_value==0000000@@@@@@@@" + cr_Value);
                       if(result1.getText().equals("")) {
-                          Log.d("MYTAG", "result_value==0000000@@@@@@@@" + cr_Value);
-                          cr_Value = cr_Value + "";
-                          c_Result.setText(cr_Value);
-                      }else {
+                          Log.d("MYTAG", "result_value==0000000@@@@@@@@" + result_value);
+//                          cr_Value = cr_Value + "";
+
+                      }else if(!result1.getText().equals("")){
                           result1.setText("");
                           cr_Value = cr_Value + "+";
                           c_Result.setText(cr_Value);
