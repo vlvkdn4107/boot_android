@@ -3,9 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/workspace_android/boot_android/mySpace/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3095" />
+        <entry key="..\:/workspace_android/boot_android/mySpace/app/src/main/res/drawable-v24/solid_02.xml" value="0.3095" />
+        <entry key="..\:/workspace_android/boot_android/mySpace/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3095" />
+        <entry key="..\:/workspace_android/boot_android/mySpace/app/src/main/res/drawable/radius_01.xml" value="0.3095" />
+        <entry key="..\:/workspace_android/boot_android/mySpace/app/src/main/res/drawable/shape.xml" value="0.3095" />
+        <entry key="..\:/workspace_android/boot_android/mySpace/app/src/main/res/drawable/solid_01.xml" value="0.3095" />
+        <entry key="..\:/workspace_android/boot_android/mySpace/app/src/main/res/drawable/text.xml" value="0.3095" />
+        <entry key="..\:/workspace_android/boot_android/mySpace/app/src/main/res/layout/activity_main.xml" value="0.27575887131252674" />
         <entry key="..\:/workspace_android/boot_android/mySpace/app/src/main/res/layout/constrain.xml" value="0.27575887131252674" />
         <entry key="..\:/workspace_android/boot_android/mySpace/app/src/main/res/layout/constrain2.xml" value="0.27575887131252674" />
         <entry key="..\:/workspace_android/boot_android/mySpace/app/src/main/res/layout/constrain3.xml" value="0.27575887131252674" />
+        <entry key="..\:/workspace_android/boot_android/mySpace/app/src/main/res/layout/drawble_shape_01.xml" value="0.27575887131252674" />
         <entry key="..\:/workspace_android/mySpace/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.292" />
         <entry key="..\:/workspace_android/mySpace/app/src/main/res/drawable-v24/solid_02.xml" value="0.305" />
         <entry key="..\:/workspace_android/mySpace/app/src/main/res/drawable/abc.xml" value="0.305" />

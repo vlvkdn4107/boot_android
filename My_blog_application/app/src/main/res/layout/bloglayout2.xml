@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    android:scrollbars="none"을 사용하면 스크롤바가 사라진다!-->
+    <ScrollView
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:text="TEXT1"
+                android:background="@color/purple_200"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:text="TEXT2"
+                android:background="#3F51B5"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:text="TEXT3"
+                android:background="#FF5722"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:text="TEXT4"
+                android:background="#CDDC39"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:text="TEXT5"
+                android:background="#E91E63"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
