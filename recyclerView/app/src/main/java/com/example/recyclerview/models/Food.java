@@ -71,4 +71,14 @@ public class Food implements Serializable {
         foods.add(new Food("https://cdn.pixabay.com/photo/2018/08/04/23/43/watermelon-3584717__340.jpg","Food16","SubTitle1","detail"));
         return foods;
     }
+
+    @Override
+    public String toString() {
+        return "Food{" +
+                "thumbnail='" + thumbnail + '\'' +
+                ", title='" + title + '\'' +
+                ", subTitle='" + subTitle + '\'' +
+                ", detail='" + detail + '\'' +
+                '}';
+    }
 }

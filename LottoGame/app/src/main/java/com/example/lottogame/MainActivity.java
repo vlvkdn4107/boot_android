@@ -5,7 +5,6 @@ import androidx.core.content.ContextCompat;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.NumberPicker;
@@ -23,10 +22,11 @@ public class MainActivity extends AppCompatActivity {
     private Button initBtn;
     private Button runBtn;
     private NumberPicker numberPicker;
+
     private ArrayList<TextView> numberTextViewList = new ArrayList<>();
     private Set<Integer> pickerNumberSet = new HashSet<>();
     private boolean didRun = false;
-    private static final String TAG = MainActivity.class.getName(); // MainActivity <<
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         initData();
         addEventListner();
         getRandomNumber();
-//        Log.d(TAG,"" + getRandomNumber());
+
     }
     private void initData(){
         numberTextViewList.add(findViewById(R.id.textView1));
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             for(int i = 0; i < list.size(); i++){
                 numberTextViewList.get(i).setText(String.valueOf(list.get(i)));
                 numberTextViewList.get(i).setVisibility(View.VISIBLE);
-                // 도전 과제!!(1~10번)(11~20)(21~30)(31~40)(41~45)
+                // 숫자 범위에 따라 원의 색 다르게 처리
                 numberTextViewList.get(i).setBackground(setTextViewBackground(list.get(i)));
 
             }
@@ -75,9 +75,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "초기화 후에 시도", Toast.LENGTH_SHORT).show();
                 return;
             }
-            //1. NumberPicker에 현재 값을 불러온다
+            //NumberPicker에 현재 값을 불러온다
             int selectedNumber = numberPicker.getValue();
-            Log.d(TAG,"" + selectedNumber);
+
             //번호는 5개 까지 선택 가능!
             if(pickerNumberSet.size() >= 5){
                 Toast.makeText(this,"번호는 5개까지 선택 가능합니다.", Toast.LENGTH_SHORT).show();
@@ -107,17 +107,19 @@ public class MainActivity extends AppCompatActivity {
     }
     private List<Integer> getRandomNumber(){
         ArrayList<Integer> list = new ArrayList<>();
-        // 랜덤 번호를 1번부터 45번 까지 미리 만들어보 보자
+        // 랜덤 번호를 1번부터 45번 까지 Set에 담기
+
         for(int i = 1; i < 46; i++){
-            //자료구조에 담기
             if(pickerNumberSet.contains(i)){
+                // 번호 중복 안되도록 continue 처리
                 continue;
             }
             list.add(i); // 1~45까지 값이 담긴다.
         }
+        //shuffle - 랜덤배치 ,순서가 있는 list 계열만 들어갈 수 있다.
         Collections.shuffle(list);
         return list.subList(0, 6 - pickerNumberSet.size());
-        //0 ~6 번째까지 나눌껀데 pickerNumberSet의 사이즈만큼 뺄거다
+        //0 ~6 번째까지 잘라라
     }
     // 숫자 크기에 따라서 배경을 다르게 만듬
     private Drawable setTextViewBackground(int number){

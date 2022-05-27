@@ -12,7 +12,6 @@ import android.widget.EditText;
 public class Activity1 extends AppCompatActivity {
 
     private static final String TAG = "TAG";
-
     public static final String KEY_NAME = "key Name";
 
     private Button okBtn;

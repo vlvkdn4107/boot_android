@@ -19,9 +19,6 @@
 
 
     </LinearLayout>
-
-
-
     <LinearLayout
         android:id="@+id/bottomLinear"
         app:layout_constraintEnd_toEndOf="parent"

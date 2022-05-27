@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 //        recyclerView.setAdapter(new FoodAdapter(Food.getSampleData(), this));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        recyclerView.hasFixedSize();// 성능 개선
 //        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
 
     }
