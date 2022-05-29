@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/boot_android/myfragment/app/src/main/res/layout/activity_home.xml" value="0.36614583333333334" />
+        <entry key="..\:/boot_android/myfragment/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/boot_android/myfragment/app/src/main/res/layout/fragment_banner.xml" value="0.36614583333333334" />
+        <entry key="..\:/boot_android/myfragment/app/src/main/res/layout/fragment_banner2.xml" value="0.36614583333333334" />
+        <entry key="..\:/boot_android/myfragment/app/src/main/res/layout/fragment_fragmenttwo.xml" value="0.36614583333333334" />
+        <entry key="..\:/boot_android/myfragment/app/src/main/res/layout/fragment_one.xml" value="0.36614583333333334" />
         <entry key="..\:/myfragment/app/src/main/res/layout/activity_home.xml" value="0.2546875" />
         <entry key="..\:/myfragment/app/src/main/res/layout/activity_main.xml" value="0.31875" />
         <entry key="..\:/myfragment/app/src/main/res/layout/fragment_banner.xml" value="0.2546875" />

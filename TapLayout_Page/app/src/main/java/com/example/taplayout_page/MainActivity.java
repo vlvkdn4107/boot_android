@@ -46,8 +46,9 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("TWO"));
         tabLayout.addTab(tabLayout.newTab().setText("THREEE"));
 
-        //탭레이아웃 이벤트 처리 부분
 
+
+        //탭레이아웃 이벤트 처리 부분
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {

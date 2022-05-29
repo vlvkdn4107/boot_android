@@ -3,6 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/drawable-v24/contentshape.xml" value="0.276" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.276" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/drawable/buttonshape.xml" value="0.275" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.276" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2985" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/drawable/ic_baseline_receipt_24.xml" value="0.276" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/drawable/ic_baseline_room_24.xml" value="0.276" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.2985" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/drawable/ic_baseline_shopping_bag_24.xml" value="0.276" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/drawable/ic_launcher_background.xml" value="0.276" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/drawable/shape.xml" value="0.276" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/layout/activity_detail.xml" value="0.18854211201368107" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/layout/fragment_five.xml" value="0.1881145788798632" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/layout/fragment_four.xml" value="0.1881145788798632" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/layout/fragment_one.xml" value="0.22" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/layout/fragment_three.xml" value="0.1881145788798632" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/layout/fragment_two.xml" value="0.25" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/layout/menuicon.xml" value="0.3651041666666667" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/layout/recycleitem.xml" value="0.33" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/layout/toolbar.xml" value="0.2609289617486339" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/menu/bottom_nav.xml" value="0.36614583333333334" />
+        <entry key="..\:/boot_android/weekendstudent/app/src/main/res/menu/menuicon.xml" value="0.3651041666666667" />
         <entry key="..\:/weekendstudent/app/src/main/res/drawable/home.xml" value="0.2355" />
         <entry key="..\:/weekendstudent/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.148" />
         <entry key="..\:/weekendstudent/app/src/main/res/layout/activity_main.xml" value="0.18888888888888888" />

@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/boot_android/myaddview2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2885" />
+        <entry key="..\:/boot_android/myaddview2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2355" />
+        <entry key="..\:/boot_android/myaddview2/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/myaddview2/app/src/main/res/layout/activity_main.xml" value="0.31875" />
         <entry key="..\:/myaddview2/app/src/main/res/layout/car.xml" value="0.25" />
       </map>

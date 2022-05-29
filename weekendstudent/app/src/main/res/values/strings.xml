@@ -2,4 +2,5 @@
     <string name="app_name">weekendstudent</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="page_title">나의 당근</string>
 </resources>
