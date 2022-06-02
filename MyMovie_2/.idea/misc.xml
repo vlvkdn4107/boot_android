@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/MyMovie_2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.186" />
+        <entry key="..\:/MyMovie_2/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.186" />
+        <entry key="..\:/MyMovie_2/app/src/main/res/font/font.xml" value="0.34444444444444444" />
+        <entry key="..\:/MyMovie_2/app/src/main/res/layout/activity_main.xml" value="0.31875" />
+        <entry key="..\:/MyMovie_2/app/src/main/res/layout/activity_splash.xml" value="0.3359375" />
+        <entry key="..\:/MyMovie_2/app/src/main/res/layout/fragment_info.xml" value="0.3359375" />
+        <entry key="..\:/MyMovie_2/app/src/main/res/layout/fragment_page1.xml" value="0.33" />
+        <entry key="..\:/MyMovie_2/app/src/main/res/layout/item_movie_card.xml" value="0.31875" />
+        <entry key="..\:/MyMovie_2/app/src/main/res/menu/bottom_app_bar.xml" value="0.33489583333333334" />
+        <entry key="..\:/MyMovie_2/app/src/main/res/menu/top_app_bar.xml" value="0.3359375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
