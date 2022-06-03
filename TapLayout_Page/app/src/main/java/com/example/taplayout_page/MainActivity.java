@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ViewPager viewPager = findViewById(R.id.viewPager);
 
+        // 동적으로 탭 생성하기
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         tabLayout.addTab(tabLayout.newTab().setText("ONE"));
         tabLayout.addTab(tabLayout.newTab().setText("TWO"));
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
+                // 선택된 탭에서 다른 탭 선택했을때 발생해야하는 기능,이벤트 처리
                 int position = tab.getPosition();
 
             }
@@ -67,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
                 int position = tab.getPosition();
+                // 한번더 탭을 클릭했을때 발생해야하는 기능,이벤트 처리
 
             }
         });

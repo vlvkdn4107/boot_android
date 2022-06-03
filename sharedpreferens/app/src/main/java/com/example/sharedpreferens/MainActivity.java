@@ -87,9 +87,9 @@ public class MainActivity extends AppCompatActivity {
             int age = preferences.getInt("age", 0);
             Toast.makeText(this, "age : " +  age, Toast.LENGTH_SHORT).show();
             boolean isMarried = preferences.getBoolean("isMarried", false);
-            Log.d("TAG", "name 값 확인 : " + name);
-            Log.d("TAG", "age 값 확인 : " + age);
-            Log.d("TAG", "isMarried 값 확인 : " + isMarried);
+            Log.d("TAG", "LoadBtn name 값 확인 : " + name);
+            Log.d("TAG", "LoadBtn age 값 확인 : " + age);
+            Log.d("TAG", "LoadBtn isMarried 값 확인 : " + isMarried);
 
         });
         btnDelete.setOnClickListener(view -> {

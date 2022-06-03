@@ -1,5 +1,6 @@
 package com.example.mymovie_1.adapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.FitCenter;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.example.mymovie_1.R;
+import com.example.mymovie_1.interfaces.OnMovieItemClicked;
 import com.example.mymovie_1.models.Movie;
 
 import java.util.ArrayList;
@@ -23,14 +25,26 @@ import java.util.List;
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHorder>{
 
     private List<Movie> list = new ArrayList<>();
+    private OnMovieItemClicked onMovieItemClicked;
+
+    public void setOnMovieItemClicked(OnMovieItemClicked onMovieItemClicked) {
+        this.onMovieItemClicked = onMovieItemClicked;
+    }
     // 통신 배우기 전에는 생성자에서 데이터를 전달 받아서 화면을 구성했다면
     // 지금은 네이트워크 통신이기 때문에 화면을 그리는 시점 보다 더 늦게 데이터가 도달 할수 있다.
 
-    public void addItemList(List<Movie> list){
+    public void initItemList(List<Movie> list){
         this.list = list;
         // 데이터가 변경되었으면 데이터를 바꿨다면 다시 그려주는놈
         notifyDataSetChanged();
     }
+
+    // 위에 놈은 덮어쓰기 때문에 새로 만듬!
+    public void addItem(List<Movie> addList){
+        this.list.addAll(list.size(), addList);
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public MyViewHorder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -45,6 +59,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHorder
     public void onBindViewHolder(@NonNull MyViewHorder holder, int position) {
         Movie movie = list.get(position);
         holder.setItem(movie);
+        holder.itemView.setOnClickListener(event ->{
+            onMovieItemClicked.selecteditem(movie);
+        });
     }
 
     @Override
@@ -91,6 +108,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHorder
                     .into(posterImageView);
             // view holder 안에서 하는 개발자
             // 뷰 홀더 안에 메서드를 만들어서
+
         }
     }// end of inner class
 

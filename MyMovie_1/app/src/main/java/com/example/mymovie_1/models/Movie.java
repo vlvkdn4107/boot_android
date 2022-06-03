@@ -3,7 +3,10 @@ package com.example.mymovie_1.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable {
+    //Serializable 직렬화
     private int id;
     private String url;
     private String title;

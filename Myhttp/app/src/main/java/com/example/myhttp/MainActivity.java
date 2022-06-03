@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     // 확장 프로그램 gerpper 설치
     // Gson 라이브러르 사용
     // build에 implementation 'com.google.code.gson:gson:2.8.6' 추가
+
+    // TMI
     // 2.8.6  맨앞은 main 숫자가 바뀌면 완전히 많이 업데이트한거다
     // 두전째는 마이너 심각한 문제가있어서 업데이트한거다
     // 세번째는 그냥 짜잘한 업데이트했을때

@@ -30,11 +30,8 @@ public class MainActivity extends AppCompatActivity {
         images.add("https://search.pstatic.net/common?type=o&size=174x246&quality=100&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20220506_169%2F16518204621480DxEQ_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2");
         images.add("https://search.pstatic.net/common?type=o&size=174x246&quality=100&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20220516_144%2F1652687286550mcE4G_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2");
         layoutIndicatorsContainer = findViewById(R.id.layoutIndicators);
-
         sliderImageViewPager = findViewById(R.id.sliderViewPager2);
-
         sliderImageViewPager.setOffscreenPageLimit(2);
-
         sliderImageViewPager.setAdapter( new ImageSliderAdapter(this,images));
         sliderImageViewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
